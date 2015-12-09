@@ -10,7 +10,6 @@
           <li>{{ site.title }}</li>
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
           <li class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></li>
-
         </ul>
       </div>
 
@@ -33,6 +32,10 @@
       <div class="footer-col footer-col-3">
         <p>{{ site.description }}</p>
       </div>
+
+      <!-- License -->
+      {% include license.html %}
+
     </div>
 
   </div>

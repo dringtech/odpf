@@ -21,7 +21,7 @@ addressed when making data free for anyone to use.
 
 ![Image of the Open Data Elephant][ODNELLY]
 
-[ODNELLY]: /images/opendataelephant.png "Open Data is like an elephant. It looks and feels different depending on who you ask, and it can take a while to eat."
+[ODNELLY]: /images/opendataelephant.png "Open Data is like an elephant. It looks and feels different depending on who you ask, and it can take a while to eat." {:width="500px"}
 
 Concerns include
 

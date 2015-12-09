@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+This is the Open Data Process Framework (previously known as the Open Data
+Publishing Framework). It aims to define a lightweight, standardised approach
+to publishing, governing and consuming open data in support of open
+innovation.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+It was developed during a consulting engagement with ODI Leeds, and collects
+best practice from across the Open Data community.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Contributions are welcomed.

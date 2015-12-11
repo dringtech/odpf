@@ -16,8 +16,7 @@ url: "http://odpf.dring.tech" # the base hostname & protocol for your site
 twitter_username: dringtech
 github_username:  dringtech
 
-collections:
-  - tasks
-
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed

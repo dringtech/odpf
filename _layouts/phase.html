@@ -6,7 +6,8 @@ layout: default
   <header class="phase-header">
     <h1 class="phase-title">{{ page.title }}</h1>
     <ul>
-      {% for slug in page.url %}
+      {% assign path = page.url | split: '/' %}
+      {% for slug in path %}
       <li>{{ slug }}</li>
       {% endfor %}
     </ul>

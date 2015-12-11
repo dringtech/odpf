@@ -1,3 +1,4 @@
 <div class="task">
+  {% capture my-include %}{% include task/{{ include.name }}.md %}{% endcapture %}
   Yo! Task!
 </div>

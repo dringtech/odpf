@@ -2,6 +2,7 @@
 <ul class='breadcrumb'>
   {% assign path = page.url | split: '/' %}
   {% for slug in path %}
+    {{ slug }}
     {% if forloop.first == true || slug == 'index.html' %}
     {% else %}
       {% assign offset = path.size | minus: forloop.index %}

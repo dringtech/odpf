@@ -1,8 +1,8 @@
 
 <ul class='breadcrumb'>
-  {% assign path = page.url | split: '/' %}
+  {% assign path = page.url | replace: ".html","" | replace: "/index","" | split: '/' %}
   {% for slug in path %}
-    {% if forloop.first == true || slug == 'index.html' %}
+    {% if forloop.first == true %}
     {% else %}
       {% assign offset = path.size | minus: forloop.index %}
       <li data-slug="{{ slug }}"><a href="{{ path | pop: offset | join: '/' }}/">{{ slug | capitalize }}</a></li>

@@ -1,11 +1,4 @@
-
 <div class="task">
-  <h1>{{ task.title }}</h1>
-  {{ content }}
-
-  {% capture my-include %}
-    {% include task/{{ include.name }}.md %}
-  {% endcapture %}
-  {{ my-include | markdownify }}
-
+  {% capture my-include %}{% include task/{{ include.name }}.md %}{% endcapture %}
+  <!-- {{ my-include | markdownify }} -->
 </div>

@@ -1,0 +1,44 @@
+$line-colour: #909090;
+$phase-task-navigator-circle-radius: 64px;
+
+ul.breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    display: inline;
+  }
+  li::before {
+    content: "> ";
+  }
+  li:first-child::before {
+    content: "";
+  }
+}
+
+.phase-task-navigator {
+  ul {
+    margin-left: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      display: inline-block;
+      width: $phase-task-navigator-circle-radius;
+      height: $phase-task-navigator-circle-radius;
+      font-size: 40px;
+      margin: 0 $phase-task-navigator-circle-radius/2 0 $phase-task-navigator-circle-radius/2;
+      border: 4px solid $line-colour;
+      border-radius: $phase-task-navigator-circle-radius;
+      position: relative;
+      a {
+        padding-top: 8px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        text-align: center;
+      }
+    }
+  }
+}

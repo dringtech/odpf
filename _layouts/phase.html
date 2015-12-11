@@ -4,26 +4,30 @@ layout: default
 <article class="phase">
 
   <header class="phase-header">
-    <h1 class="phase-title">{{ page.title }}</h1>
-    <ul>
-      {% assign path = page.url | split: '/' %}
-      {% for slug in path %}
-      <li>{{ slug }}</li>
-      {% endfor %}
-    </ul>
+    {% include breadcrumb.html %}
 
-    <ul class="phase-tasks">
-      <li>
-        1
-      </li>
-      <li>
-        2
-      </li>
-    </ul>
+    <h1 class="phase-title">{{ page.title }}</h1>
+    <div class="phase-content">
+      {{ content }}
+    </div>
+
+    <nav class='phase-task-navigator'>
+      <ul>
+        {% for task in page.tasks %}
+          <li>
+            <a href="">{{ task }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
   </header>
 
-  <div class="phase-content">
-    {{ content }}
-  </div>
+  <!--
+  <p>HTML</p>
+  {% include task/test.html %}
+
+  <p>Markdown</p>
+  {% include task.html name='test' %} -->
 
 </article>

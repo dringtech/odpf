@@ -1,4 +1,4 @@
 <div class="task">
   {% capture task_content %}{% include task/{{ include.name }}.md %}{% endcapture %}
-  {{ task_content }}
+  {{ task_content | markdownify }}
 </div>

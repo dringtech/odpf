@@ -15,11 +15,13 @@ $phase-task-navigator-circle-radius: 64px;
 
 ul.breadcrumb {
   @extend .horizontal-list;
-  li::before {
-    content: "> ";
-  }
-  li:first-child::before {
-    content: "";
+  li {
+    &::before {
+      content: "> ";
+    }
+    &:first-of-type::before {
+      content: "";
+    }
   }
 }
 
@@ -56,6 +58,9 @@ ul.breadcrumb {
       margin-right: 10px;
       font-size: 20px;
       border: 4px solid $line-colour;
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
   }
 }

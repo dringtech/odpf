@@ -53,6 +53,7 @@ ul.breadcrumb {
     @extend .horizontal-list;
     li {
       padding: 10px;
+      margin-right: 10px;
       font-size: 20px;
       border: 4px solid $line-colour;
     }

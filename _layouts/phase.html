@@ -13,23 +13,19 @@ layout: default
 
     <nav class='phase-task-navigator'>
       <ul>
-        {% for task in page.tasks %}
-          <li>
+        {% for task in page.tasks %}<li>
             <a href="#{{task | handle }}">{{ forloop.index }}</a>
-          </li>
-        {% endfor %}
+          </li>{% endfor %}
       </ul>
     </nav>
 
   </header>
 
   <section>
-    {% for task in page.tasks %}
-      <section id='{{ task | handle }}'>
+    {% for task in page.tasks %}<section id='{{ task | handle }}'>
         <h1>{{forloop.index}}. {{ task | replace: "-"," " | capitalize }}</h1>
         {% include task.html name=task %}
-      </section>
-    {% endfor %}
+      </section>{% endfor %}
   </section>
 
 </article>

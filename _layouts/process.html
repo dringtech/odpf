@@ -13,9 +13,7 @@ phases:
     <h1 class="title">{{ page.title }}</h1>
     <nav class='process-phase-navigator'>
       <ul>
-        {% for phase in page.phases %}
-          <li><a href="{{ phase }}">{{ phase | capitalize }}</a></li>
-        {% endfor %}
+        {% for phase in page.phases %}<li><a href="{{ phase }}">{{ phase | capitalize }}</a></li>{% endfor %}
       </ul>
     </nav>
   </header>

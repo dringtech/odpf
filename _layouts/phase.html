@@ -15,8 +15,8 @@ layout: default
       <ul>
         <li class='control scroll-back'><a href="">&lt;</a></li>
         {% for task in page.tasks %}<li>
-            <a href="#{{task | handle }}">{{ forloop.index }}</a>
-          </li>{% endfor %}
+          <a href='#' onclick="task.showTask('{{task | handle}}');">{{ forloop.index }}</a>
+        </li>{% endfor %}
         <li class='control scroll-forward'><a href="">&gt;</a></li>
       </ul>
     </nav>
@@ -24,10 +24,12 @@ layout: default
   </header>
 
   <section>
-    {% for task in page.tasks %}<section id='{{ task | handle }}'>
+    {% for task in page.tasks %}<section class='task' id='{{ task | handle }}'>
         <h1>{{forloop.index}}. {{ task | replace: "-"," " | capitalize }}</h1>
         {% include task.html name=task %}
       </section>{% endfor %}
   </section>
 
 </article>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="/js/task.js"></script>

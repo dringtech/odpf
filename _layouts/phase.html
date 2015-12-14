@@ -13,11 +13,11 @@ layout: default
 
     <nav class='phase-task-navigator'>
       <ul>
-        <li class='control scroll-back'><a href="">&lt;</a></li>
+        <li class='control scroll-back'><button>&lt;</button></li>
         {% for task in page.tasks %}<li>
-          <a href='#' onclick="task.showTask('{{task | handle}}');">{{ forloop.index }}</a>
+          <button onclick="task.showTask('{{task | handle}}');">{{ forloop.index }}</button>
         </li>{% endfor %}
-        <li class='control scroll-forward'><a href="">&gt;</a></li>
+        <li class='control scroll-forward'><button>&gt;</button></li>
       </ul>
     </nav>
 

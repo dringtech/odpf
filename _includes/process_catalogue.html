@@ -1,0 +1,6 @@
+{% for process in site.data.processes %}
+<article>
+  <h1>{{ process.title }}</h1>
+  <a href="{{ process.id | prepend:'process/' | prepend:site.baseurl }}">Read more</a>
+</article>
+{% endfor %}

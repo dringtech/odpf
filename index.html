@@ -1,17 +1,9 @@
 ---
 layout: default
+process_prefix: "process"
 ---
 
-<h1>Posts</h1>
-
-<ul>
-    {% for post in site.posts %}
-    <li>
-      <span>{{ post.date | date: "%b %-d, %Y" }}</span>
-
-      <h2>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h2>
-    </li>
-    {% endfor %}
-</ul>
+<section id="process_catalogue">
+  <h1>Process Catalogue</h1>
+  {% include process_catalogue.html %}
+</section>

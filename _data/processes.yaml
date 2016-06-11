@@ -1,0 +1,14 @@
+- id: publication
+  title: Open Data Publication
+  summary:
+  phases:
+    - id: prepare
+      tasks:
+        - id: biz-case
+        - id: stakeholders 
+    - id: plan
+    - id: publish
+
+- id: assessment
+  title: Assessment of Open Data
+  summary:

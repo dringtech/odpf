@@ -19,3 +19,15 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+collections:
+  processes:
+    output: true
+    permalink: /px/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: processes
+    values:
+      layout: process

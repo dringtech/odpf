@@ -20,14 +20,32 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 
+# Collections of processes, artifacts, tasks
 collections:
   processes:
     output: true
-    permalink: /px/:path/
+    permalink: /process/:path/
+  artifacts:
+    output: true
+    permalink: /artifact/:path/
+  tasks:
+    output: true
+    permalink: /task/:path/
 
+# Set defaults for collections
 defaults:
   - scope:
       path: ""
       type: processes
     values:
       layout: process
+  - scope:
+      path: ""
+      type: artifacts
+    values:
+      layout: artifact
+  - scope:
+      path: ""
+      type: tasks
+    values:
+      layout: task

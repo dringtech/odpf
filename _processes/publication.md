@@ -3,13 +3,13 @@ id: publication
 title: Open Data Publication
 phases:
   - id: prepare
+    title: Prepare the groundwork
     tasks:
-      - id: biz-case
-      - id: stakeholders
+      - review-business-case
+      - stakeholders
   - id: plan
+    title: Plan the publication
   - id: publish
-summary: >
-  Some summary
-
+    title: Publish the data
 ---
-Helooooo
+How to go about publishing open data.

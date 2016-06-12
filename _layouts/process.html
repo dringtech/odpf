@@ -1,9 +1,30 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-{{ content }}
+<header>
+  <h1>{{ page.title }}</h1>
+</header>
+<section>
+  {{ content }}
+</section>
 
+<section>
+  {% for phase in page.phases %}
+  <article>
+    {{ phase.title }}
+
+    <ul>
+    {% for task_name in phase.tasks %}
+      <!-- TODO reference a collection member directory -->
+      {% assign task = site.tasks | where: task.url,"/task/"{{ task_name }}"/" | first %}
+      <li>{{ task_name }}: {{ task.excerpt }}</li>
+      {{ task.url }}
+
+    {% endfor %}
+    </ul>
+  </article>
+  {% endfor %}
+<section>
 
 <code>
   {{ page }}

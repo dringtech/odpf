@@ -31,7 +31,11 @@ layout: default
 
       <section>
 
-        {% include readmore.html item=task %}
+        {% if task != null %}
+          {% include readmore.html item=task %}
+        {% else %}
+          <p class="ERROR">Task <code>{{ task_name }}</code> does not exist</p>
+        {% endif %}
 
       </section>
 

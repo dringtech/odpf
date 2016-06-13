@@ -4,28 +4,41 @@ layout: default
 <header>
   <h1>{{ page.title }}</h1>
 </header>
+
 <section>
+
   {{ content }}
+
 </section>
 
 <section>
-  {% for phase in page.phases %}
-  <article>
-    {{ phase.title }}
 
-    <ul>
+  {% for phase in page.phases %}
+
+  <article>
+
+    <header>
+
+      <h1>{{ phase.title }}</h1>
+
+      {{ phase.summary }}
+
+    </header>
+
     {% for task_name in phase.tasks %}
-      <!-- TODO reference a collection member directory -->
-      {% assign task = site.tasks | where: task.url,"/task/"{{ task_name }}"/" | first %}
-      <li>{{ task_name }}: {{ task.excerpt }}</li>
-      {{ task.url }}
+
+      {% assign task = site.tasks | where:"slug",task_name | first %}
+
+      <section>
+
+        {% include readmore.html item=task %}
+
+      </section>
 
     {% endfor %}
-    </ul>
-  </article>
-  {% endfor %}
-<section>
 
-<code>
-  {{ page }}
-</code>
+  </article>
+
+  {% endfor %}
+
+<section>

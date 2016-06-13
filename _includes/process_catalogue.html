@@ -1,7 +1,5 @@
 {% for process in site.processes %}
 <article>
-  <h1>{{ process.title }}</h1>
-  <p>{{ process.excerpt }}</p>
-  <p><a href="{{ process.url }}">Read more</a></p>
+  {% include readmore.html item=process %}
 </article>
 {% endfor %}

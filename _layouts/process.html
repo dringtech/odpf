@@ -1,18 +1,28 @@
 ---
 layout: default
 ---
-<section>
+<nav class='process-phase-navigator'>
+  <ul role="tablist">
+    <li class="active"><a href="#overview" aria-controls="home" role="tab" data-toggle="tab">Overview</a></li>
+    {% for phase in page.phases %}
+    <li>
+      <a href="#{{ phase.id }}" aria-controls="{{ phase.id }}" role="tab" data-toggle="tab">
+        {{ phase.id | capitalize }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
 
-  {{ content }}
+<div class="tab-content">
+  <section role="tabpanel" class="tab-pane active" id="overview">
 
-</section>
+    {{ content }}
 
-<section>
+  </section>
 
   {% for phase in page.phases %}
-
-  <article>
-
+  <section role="tabpanel" class="tab-pane" id="{{ phase.id }}">
     <header>
 
       <h1>{{ phase.title }}</h1>
@@ -37,8 +47,6 @@ layout: default
 
     {% endfor %}
 
-  </article>
-
+  </section>
   {% endfor %}
-
-<section>
+</div>

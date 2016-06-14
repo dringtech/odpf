@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   The Open Data Process Framework is a library of best practice for publising,
   governing and consuming Open Data.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://odpf.dring.tech" # the base hostname & protocol for your site
 twitter_username: dringtech
 github_username:  dringtech
 
@@ -48,3 +48,6 @@ defaults:
       type: tasks
     values:
       layout: task
+
+gems:
+  - jekyll-sitemap
